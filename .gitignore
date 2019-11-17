@@ -1,0 +1,5 @@
+##ignore this files##
+/target/
+/src/test/
+.idea
+.settings
