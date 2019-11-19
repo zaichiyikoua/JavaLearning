@@ -18,7 +18,7 @@ public class PrintListInReversedOrder<E> {
 		// 要打印出来的数值
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
 		while (!(header == null)) {
-			linkedList.add(header.value);
+			linkedList.push(header.value);
 			header = header.nextNode;
 		}
 		// 打印出来
