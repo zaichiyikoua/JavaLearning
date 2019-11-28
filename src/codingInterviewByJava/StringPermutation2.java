@@ -44,7 +44,6 @@ public class StringPermutation2 {
 		// 不包含第一个字符,则下一步在剩余的字符中选取num个字符
 		stack.pop();
 		permutation(charArray, beginIndex + 1, secondIndex);
-
 	}
 
 }

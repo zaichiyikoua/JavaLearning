@@ -9,6 +9,10 @@ import java.util.List;
 //	6		14		====>>  4	6	8	10	12	14	16
 //4	  8	  12  16
 
+//*******************************************************************
+//该题暂时未完成
+
+
 public class ConvertBinarySearchTree {
 	// 可以中序遍历二叉树 因为特点是从小到大遍历每个节点
 	// 遍历顺序 左 根 右
@@ -16,7 +20,7 @@ public class ConvertBinarySearchTree {
 
 		return null;
 	}
-
+	
 	// 转换方法
 	public TreeNode convert(TreeNode binaryTree) {
 		if (binaryTree == null) {

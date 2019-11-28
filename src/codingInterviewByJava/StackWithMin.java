@@ -24,7 +24,7 @@ public class StackWithMin {
 		dataList.push(data);
 		// 辅助栈压入
 		if (data > ancillaryList.peek()) {
-			ancillaryList.push(ancillaryList.getLast());
+			ancillaryList.push(ancillaryList.peek());
 		}
 		if (data < ancillaryList.peek()) {
 			ancillaryList.push(data);
