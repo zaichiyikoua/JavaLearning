@@ -6,6 +6,15 @@ public class TreeNode {
 	TreeNode left;
 	TreeNode right;
 
+	public TreeNode() {
+		super();
+	}
+
+	public TreeNode(int value) {
+		super();
+		this.value = value;
+	}
+
 	public int getValue() {
 		return value;
 	}
@@ -63,7 +72,5 @@ public class TreeNode {
 			return false;
 		return true;
 	}
-	
-	
 
 }

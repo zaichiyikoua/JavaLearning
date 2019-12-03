@@ -10,7 +10,6 @@ public class StackWithMin {
 	// 思路 使用辅助栈来保存数据栈中的最小值
 	// 让辅助栈栈顶一直保存最小值，调用min（）方法时，将栈顶弹出
 	// 每次数据栈压入时，跟辅助栈栈顶最小值比较 数据栈弹出时，辅助栈同时弹出，更新栈顶
-
 	// 数据栈和辅助栈
 	private LinkedList<Integer> dataList = new LinkedList<Integer>();
 	private LinkedList<Integer> ancillaryList = new LinkedList<Integer>();

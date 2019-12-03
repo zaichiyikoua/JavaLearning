@@ -1,7 +1,23 @@
-package algorithm;
+package codingInterviewByJava;
 
-//快排 java实现
-public class QuickSort {
+//面试题40：最小的k个数
+//题目：输入n个整数，找出其中最小的k个数。例如输入4、5、1、6、2、7、3、8
+//这8个数字，则最小的4个数字是1、2、3、4。
+
+public class KLeastNumbers {
+	// 思路，排序 排序完成之后 最小的k位数就是前k位
+	public void solution(int[] array, int k) {
+		if (array == null || array.length <= 0) {
+			return;
+		}
+		if (k <= 0) {
+			return;
+		}
+		quickSort(array, 0, array.length - 1);
+		for (int i = 0; i < k - 1; i++) {
+			System.out.println(array[i]);
+		}
+	}
 
 	public void quickSort(int[] array, int start, int end) {
 		if (array.length <= 0 || array == null || start < 0 || end < 0) {
@@ -37,7 +53,6 @@ public class QuickSort {
 		int temp = array[start];
 		array[start] = index;
 		index = temp;
-		// 返回坐标
 		return start;
 	}
 }
