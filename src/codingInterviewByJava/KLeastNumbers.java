@@ -10,7 +10,8 @@ public class KLeastNumbers {
 		if (array == null || array.length <= 0) {
 			return;
 		}
-		if (k <= 0) {
+		// 边界值
+		if (k <= 1 || k > array.length) {
 			return;
 		}
 		quickSort(array, 0, array.length - 1);
