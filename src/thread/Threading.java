@@ -29,7 +29,7 @@ public class Threading {
 			public void run() {
 				System.out.println("线程2 启动");
 				synchronized (lock) {
-					if (threading.size() != 5) {
+					while (threading.size() != 5) {
 						// 线程挂起
 						try {
 							lock.wait();
