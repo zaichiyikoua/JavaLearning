@@ -8,7 +8,7 @@ import java.util.List;
 //写两个线程，线程1添加10个元素到容器中，线程2实现监控元素的个数
 //当元素个数到达5个时，线程2给出提示并结束
 
-public class Threading {
+public class Classic {
 	// list要可见
 	volatile List<Integer> list = new ArrayList<Integer>();
 
@@ -21,7 +21,7 @@ public class Threading {
 	}
 
 	public static void main(String[] args) {
-		Threading threading = new Threading();
+		Classic threading = new Classic();
 		// 锁
 		Object lock = new Object();
 
