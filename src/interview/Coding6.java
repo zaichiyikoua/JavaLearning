@@ -1,6 +1,9 @@
 package interview;
 
-//java专项练习6
+/*
+*	javaSE专项练习6
+*	2019年12月11日
+*/
 
 public class Coding6 {
 	public static boolean isAdmin(String userId) {

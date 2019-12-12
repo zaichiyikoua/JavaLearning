@@ -2,7 +2,10 @@ package interview;
 
 import java.util.concurrent.TimeUnit;
 
-//java专项练习3
+/*
+*	javaSE专项练习3
+*	2019年12月11日
+*/
 
 public class Coding3 extends Thread {
 

@@ -1,6 +1,9 @@
 package interview;
 
-//java专项练习1
+/*
+*	javaSE专项练习1
+*	2019年12月11日
+*/
 
 public class Coding {
 	private static final String MESSAGE = "taobao";

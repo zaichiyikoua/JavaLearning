@@ -1,6 +1,9 @@
 package interview;
 
-//java专项练习5
+/*
+*	javaSE专项练习5
+*	2019年12月11日
+*/
 
 public class Coding5 {
 	public static void main(String[] args) {

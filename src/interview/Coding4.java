@@ -1,6 +1,9 @@
 package interview;
 
-//java专项练习4
+/*
+*	javaSE专项练习4
+*	2019年12月11日
+*/
 
 public class Coding4 {
 

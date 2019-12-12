@@ -1,6 +1,9 @@
 package interview;
 
-//java专项练习2
+/*
+*	javaSE专项练习2
+*	2019年12月11日
+*/
 
 public class Coding2 {
 	public static void main(String[] args) {

@@ -1,6 +1,9 @@
 package interview;
 
-//java专项练习7
+/*
+*	javaSE专项练习7
+*	2019年12月11日
+*/
 
 public class Coding7 {
 	public static int getNumber(int num) {
