@@ -7,6 +7,7 @@ package interview;
 
 public class Coding15 {
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		Boolean flag = false;
 		if (flag = true) {
 			System.out.println("true");
