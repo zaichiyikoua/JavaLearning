@@ -8,6 +8,9 @@ package algorithm;
 
 public class BubbleSort {
 	public void solution(int[] arr) {
+		if (arr == null || arr.length <= 0) {
+			return;		
+		}
 		int length = arr.length;
 		// 默认升序
 		for (int i = 0; i < length - 1; i++) {
