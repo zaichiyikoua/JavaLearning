@@ -1,6 +1,11 @@
 package algorithm;
 
-//快排 java实现
+/*
+*	快排 java实现
+*	核心思路就是找数组的基准值 根据基准值排序 建议找数组尾的值 默认基准值左边的比基准值小
+*	然后根据基准值分成两个区间数组 然后在区间数组中继续找基准值重复以上操作 直到排序完成
+*
+*/
 public class QuickSort {
 
 	public void quickSort(int[] array, int start, int end) {
