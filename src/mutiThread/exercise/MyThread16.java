@@ -1,6 +1,5 @@
 package mutiThread.exercise;
 
-import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
 /*
