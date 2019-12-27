@@ -11,5 +11,6 @@ public class Coding5 {
 		int y = -12;
 		System.out.println(y % x);
 	}
+	// 答案 -2
 	// 取模运算，余数的符号要和被除数符号相同
 }
