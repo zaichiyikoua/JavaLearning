@@ -38,6 +38,7 @@ public class SerializeBinaryTrees {
 		private int index = 0;
 	public TreeNode detail(String[] stringArray) {
 		//初始化头节点
+		@SuppressWarnings("unused")
 		TreeNode node;
 		index ++;
 		//只要值不是*

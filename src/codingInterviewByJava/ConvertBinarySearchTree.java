@@ -16,6 +16,7 @@ import java.util.List;
 public class ConvertBinarySearchTree {
 	// 可以中序遍历二叉树 因为特点是从小到大遍历每个节点
 	// 遍历顺序 左 根 右
+	@SuppressWarnings("rawtypes")
 	public List solution(TreeNode binaryTree) {
 
 		return null;
