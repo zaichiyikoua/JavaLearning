@@ -7,34 +7,34 @@ package algorithm;
 */
 
 public class ShellSort {
-	public static int[] solution(int[] arr) {
-		if (arr == null || arr.length <= 0) {
-			return null;
-		}
-		int length = arr.length;
-		int temp;
-		// 增量gap 并且逐步缩减增量
-		for (int gap = (int) Math.floor(length / 2); gap > 0; gap /= 2) {
-			// 分解之后 内部其实是一个插排
-			for (int i = gap; i < length; i++) {
-				int j = i;
-				temp = arr[i];
-				while (j - gap >= 0 && arr[j - gap] > temp) {
-					arr[j] = arr[j - gap];
-					j = j - gap;
-				}
-				arr[j] = temp;
-			}
-		}
-		return arr;
-	}
+    public static int[] solution(int[] arr) {
+        if (arr == null || arr.length <= 0) {
+            return null;
+        }
+        int length = arr.length;
+        int temp;
+        // 增量gap 并且逐步缩减增量
+        for (int gap = (int) Math.floor(length / 2); gap > 0; gap /= 2) {
+            // 分解之后 内部其实是一个插排
+            for (int i = gap; i < length; i++) {
+                int j = i;
+                temp = arr[i];
+                while (j - gap >= 0 && arr[j - gap] > temp) {
+                    arr[j] = arr[j - gap];
+                    j = j - gap;
+                }
+                arr[j] = temp;
+            }
+        }
+        return arr;
+    }
 
-	public static void main(String[] args) {
-		int[] arr = { 6, 3, 1, 4, 5, 7, 2, 9, 8 };
-		int[] solution = solution(arr);
-		for (int i : solution) {
-			System.out.println(i);
-		}
-		// 输出结果符合预期
-	}
+    public static void main(String[] args) {
+        int[] arr = { 6, 3, 1, 4, 5, 7, 2, 9, 8 };
+        int[] solution = solution(arr);
+        for (int i : solution) {
+            System.out.println(i);
+        }
+        // 输出结果符合预期
+    }
 }

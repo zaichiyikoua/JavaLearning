@@ -17,55 +17,55 @@ import java.util.concurrent.TimeUnit;
 */
 
 public class Case3 {
-	// 一个同步
-	synchronized public void methodA() {
-		System.out.println("begin methodA threadName =" + Thread.currentThread().getName());
-		try {
-			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("end methodA");
-	}
+    // 一个同步
+    synchronized public void methodA() {
+        System.out.println("begin methodA threadName =" + Thread.currentThread().getName());
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        System.out.println("end methodA");
+    }
 
-	// 一个不同步
-	public void methodB() {
-		System.out.println("begin methodB threadName =" + Thread.currentThread().getName());
-		try {
-			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("end methodB");
-	}
+    // 一个不同步
+    public void methodB() {
+        System.out.println("begin methodB threadName =" + Thread.currentThread().getName());
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        System.out.println("end methodB");
+    }
 
-	// A线程调用的是同步方法，B线程调用的是非同步的
-	public static void main(String[] args) {
-		Case3 service = new Case3();
+    // A线程调用的是同步方法，B线程调用的是非同步的
+    public static void main(String[] args) {
+        Case3 service = new Case3();
 
-		new Thread(new Runnable() {
+        new Thread(new Runnable() {
 
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				service.methodA();
-			}
-		}, "线程A").start();
-		new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                service.methodA();
+            }
+        }, "线程A").start();
+        new Thread(new Runnable() {
 
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				service.methodB();
-			}
-		}, "线程B").start();
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                service.methodB();
+            }
+        }, "线程B").start();
 
-		// 输出
+        // 输出
 //		begin methodB threadName =B
 //		begin methodA threadName =A
 //		end methodB
 //		end methodA
-	}
+    }
 }

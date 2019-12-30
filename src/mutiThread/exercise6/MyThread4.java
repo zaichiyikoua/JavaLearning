@@ -9,28 +9,28 @@ package mutiThread.exercise6;
 
 public class MyThread4 {
 
-	// DCL-->>指的是Double-check-Locking，双检查锁机制
-	// 使用volatile禁止代码重排序(必要)，否则会发生重排序出现错误
-	volatile private static MyThread4 mythread;
+    // DCL-->>指的是Double-check-Locking，双检查锁机制
+    // 使用volatile禁止代码重排序(必要)，否则会发生重排序出现错误
+    volatile private static MyThread4 mythread;
 
-	private MyThread4() {
+    private MyThread4() {
 
-	}
+    }
 
-	public MyThread4 getInstance() {
-		try {
-			if (mythread == null) {
-				synchronized (MyThread4.class) {
-					if (mythread == null) {
-						mythread = new MyThread4();
-						return mythread;
-					}
-				}
-			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-		return mythread;
-	}
+    public MyThread4 getInstance() {
+        try {
+            if (mythread == null) {
+                synchronized (MyThread4.class) {
+                    if (mythread == null) {
+                        mythread = new MyThread4();
+                        return mythread;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+        return mythread;
+    }
 }

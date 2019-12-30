@@ -11,34 +11,34 @@ import java.util.concurrent.locks.ReentrantLock;
 */
 
 public class Case14 {
-	// isHeldByCurrentThread()的作用就是查询当前线程是否持有此锁
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ReentrantLock lock = new ReentrantLock();
-		@SuppressWarnings("unused")
-		Condition condition = lock.newCondition();
+    // isHeldByCurrentThread()的作用就是查询当前线程是否持有此锁
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        ReentrantLock lock = new ReentrantLock();
+        @SuppressWarnings("unused")
+        Condition condition = lock.newCondition();
 
-		new Thread(new Runnable() {
+        new Thread(new Runnable() {
 
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				try {
-					System.out.println(lock.isHeldByCurrentThread());
-					lock.lock();
-					System.out.println(lock.isHeldByCurrentThread());
-				} catch (Exception e) {
-					// TODO: handle exception
-					e.printStackTrace();
-				} finally {
-					// TODO: handle finally clause
-					lock.unlock();
-				}
-			}
-		}).start();
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                try {
+                    System.out.println(lock.isHeldByCurrentThread());
+                    lock.lock();
+                    System.out.println(lock.isHeldByCurrentThread());
+                } catch (Exception e) {
+                    // TODO: handle exception
+                    e.printStackTrace();
+                } finally {
+                    // TODO: handle finally clause
+                    lock.unlock();
+                }
+            }
+        }).start();
 
 //		false
 //		true
-	}
+    }
 
 }

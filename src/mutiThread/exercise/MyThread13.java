@@ -11,35 +11,35 @@ import java.util.concurrent.TimeUnit;
 */
 
 public class MyThread13 extends Thread {
-	private int count = 0;
+    private int count = 0;
 
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		while (true) {
-			try {
-				count++;
-				System.out.println("count = " + count);
-				TimeUnit.SECONDS.sleep(1);
-			} catch (Exception e) {
-				// TODO: handle exception
-				System.out.println("catch in run");
-				e.printStackTrace();
-			}
-		}
-	}
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+        while (true) {
+            try {
+                count++;
+                System.out.println("count = " + count);
+                TimeUnit.SECONDS.sleep(1);
+            } catch (Exception e) {
+                // TODO: handle exception
+                System.out.println("catch in run");
+                e.printStackTrace();
+            }
+        }
+    }
 
-	@SuppressWarnings("deprecation")
-	public static void main(String[] args) {
-		try {
-			MyThread13 thread = new MyThread13();
-			thread.start();
-			TimeUnit.SECONDS.sleep(6);
-			// 这里就可以很明显 IDE都不建议这么做
-			thread.stop();
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-	}
+    @SuppressWarnings("deprecation")
+    public static void main(String[] args) {
+        try {
+            MyThread13 thread = new MyThread13();
+            thread.start();
+            TimeUnit.SECONDS.sleep(6);
+            // 这里就可以很明显 IDE都不建议这么做
+            thread.stop();
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+    }
 }

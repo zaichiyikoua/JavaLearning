@@ -12,33 +12,33 @@ import java.util.concurrent.TimeUnit;
 */
 
 public class MyThread16 extends Thread {
-	private int count = 0;
+    private int count = 0;
 
-	@Override
-	public void run() {
-		try {
-			// TODO Auto-generated method stub
-			while (true) {
-				count++;
-				System.out.println("count =" + count);
-				TimeUnit.SECONDS.sleep(1);
-			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-	}
+    @Override
+    public void run() {
+        try {
+            // TODO Auto-generated method stub
+            while (true) {
+                count++;
+                System.out.println("count =" + count);
+                TimeUnit.SECONDS.sleep(1);
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+    }
 
-	public static void main(String[] args) {
-		try {
-			MyThread16 thread = new MyThread16();
-			thread.setDaemon(true);
-			thread.start();
-			TimeUnit.SECONDS.sleep(5);
-			System.out.println("main线程结束，守护线程停止打印");
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-	}
+    public static void main(String[] args) {
+        try {
+            MyThread16 thread = new MyThread16();
+            thread.setDaemon(true);
+            thread.start();
+            TimeUnit.SECONDS.sleep(5);
+            System.out.println("main线程结束，守护线程停止打印");
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+    }
 }

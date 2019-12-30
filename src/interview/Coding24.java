@@ -7,8 +7,8 @@ package interview;
 */
 
 public class Coding24 {
-	// list是一个ArrayList的对象，哪个选项的代码填到todo delete处，
-	// 可以在Iterator遍历的过程中正确并安全的删除一个list中保存的对象？( )
+    // list是一个ArrayList的对象，哪个选项的代码填到todo delete处，
+    // 可以在Iterator遍历的过程中正确并安全的删除一个list中保存的对象？( )
 
 //	Iterator it = list.iterator();
 //	int index = 0;
@@ -22,12 +22,11 @@ public class Coding24 {
 //	    index ++;
 //	}
 
-	// A.it.remove();
-	// B.list.remove(obj);
-	// C.list.remove(index);
-	// D.list.remove(obj,index);
+    // A.it.remove();
+    // B.list.remove(obj);
+    // C.list.remove(index);
+    // D.list.remove(obj,index);
 
-	
 //	答案：A
 //	如果在循环的过程中调用集合的remove()方法，就会导致循环出错，例如：
 //	for(int i=0;i<list.size();i++){

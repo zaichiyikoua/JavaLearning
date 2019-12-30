@@ -12,29 +12,29 @@ import java.util.concurrent.TimeUnit;
 
 public class MyThread14 extends Thread {
 
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		while (true) {
-			if (Thread.interrupted()) {
-				System.out.println("停止");
-				return;
-			}
-			System.out.println("*");
-		}
-	}
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+        while (true) {
+            if (Thread.interrupted()) {
+                System.out.println("停止");
+                return;
+            }
+            System.out.println("*");
+        }
+    }
 
-	public static void main(String[] args) {
-		MyThread14 thread = new MyThread14();
-		thread.start();
+    public static void main(String[] args) {
+        MyThread14 thread = new MyThread14();
+        thread.start();
 
-		try {
-			TimeUnit.SECONDS.sleep(3);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-		thread.interrupt();
-	}
+        thread.interrupt();
+    }
 }

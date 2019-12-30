@@ -12,44 +12,44 @@ import java.util.concurrent.TimeUnit;
 */
 
 public class MyThread15 extends Thread {
-	private int count = 0;
+    private int count = 0;
 
-	public int getCount() {
-		return count;
-	}
+    public int getCount() {
+        return count;
+    }
 
-	public void setCount(int count) {
-		this.count = count;
-	}
+    public void setCount(int count) {
+        this.count = count;
+    }
 
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		while (true) {
-			count++;
-		}
-	}
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+        while (true) {
+            count++;
+        }
+    }
 
-	@SuppressWarnings("deprecation")
-	public static void main(String[] args) {
-		try {
-			MyThread15 thread = new MyThread15();
-			thread.start();
-			TimeUnit.SECONDS.sleep(2);
-			// 第一段
-			thread.suspend();
-			System.out.println("A=" + thread.count);
-			TimeUnit.SECONDS.sleep(2);
-			// 第二段
-			thread.resume();
-			TimeUnit.SECONDS.sleep(2);
-			// 第三段
-			thread.suspend();
-			System.out.println("B=" + thread.count);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-	}
+    @SuppressWarnings("deprecation")
+    public static void main(String[] args) {
+        try {
+            MyThread15 thread = new MyThread15();
+            thread.start();
+            TimeUnit.SECONDS.sleep(2);
+            // 第一段
+            thread.suspend();
+            System.out.println("A=" + thread.count);
+            TimeUnit.SECONDS.sleep(2);
+            // 第二段
+            thread.resume();
+            TimeUnit.SECONDS.sleep(2);
+            // 第三段
+            thread.suspend();
+            System.out.println("B=" + thread.count);
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+    }
 
 }

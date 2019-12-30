@@ -8,23 +8,23 @@ import java.util.LinkedList;
 
 public class PrintListInReversedOrder<E> {
 
-	// 思路 用栈来实现 栈用集合实现
-	public ArrayList<Integer> solution(ListNode header) {
-		if (header == null) {
-			System.out.println("空指针");
-		}
-		// 用linkedList实现栈
-		LinkedList<Integer> linkedList = new LinkedList<Integer>();
-		// 要打印出来的数值
-		ArrayList<Integer> arrayList = new ArrayList<Integer>();
-		while (!(header == null)) {
-			linkedList.push(header.value);
-			header = header.nextNode;
-		}
-		// 打印出来
-		while (!linkedList.isEmpty()) {
-			arrayList.add(linkedList.pop());
-		}
-		return arrayList;
-	}
+    // 思路 用栈来实现 栈用集合实现
+    public ArrayList<Integer> solution(ListNode header) {
+        if (header == null) {
+            System.out.println("空指针");
+        }
+        // 用linkedList实现栈
+        LinkedList<Integer> linkedList = new LinkedList<Integer>();
+        // 要打印出来的数值
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        while (!(header == null)) {
+            linkedList.push(header.value);
+            header = header.nextNode;
+        }
+        // 打印出来
+        while (!linkedList.isEmpty()) {
+            arrayList.add(linkedList.pop());
+        }
+        return arrayList;
+    }
 }
