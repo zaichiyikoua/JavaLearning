@@ -13,6 +13,7 @@ import java.util.Date;
 public class Case2 extends Thread {
     // 利用Threadlocal来解决SimpleDateFormat的非线程安全问题
 
+    @SuppressWarnings("unused")
     private SimpleDateFormat format;
     private String dateString;
 
