@@ -1,4 +1,4 @@
-package thread;
+package mutiThreadInterview;
 
 import java.util.ArrayList;
 import java.util.List;

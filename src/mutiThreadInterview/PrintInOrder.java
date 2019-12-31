@@ -1,4 +1,4 @@
-package thread;
+package mutiThreadInterview;
 
 //leetcode  按序打印
 /*我们提供了一个类：
