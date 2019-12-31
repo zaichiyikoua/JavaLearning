@@ -1,4 +1,4 @@
-package interview;
+package javaBasicExercises;
 
 /*
 *	javaSE专项练习10

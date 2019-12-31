@@ -1,4 +1,4 @@
-package interview;
+package javaBasicExercises;
 
 import java.util.concurrent.TimeUnit;
 
