@@ -14,6 +14,8 @@ import java.util.concurrent.TimeUnit;
 public class Case4 {
     // ConcurrentHashMap缺点是不支持排序，如果使用LinkedHashMap，又不支持并发
     // 所以如果出现这种又要支持并发，又要支持排序的要求，就可以使用ConcurrentSkipListMap
+    // ***********************************************
+    // 如果还想要去重，可以使用ConcurrentSkipListSet，用法是一样的，这里就不再重复练习了
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         MyService service = new MyService();
