@@ -1,9 +1,0 @@
-《二十三种经典设计模式》      持续更新
-
-虽然已经学过很大部分了，但是没有系统的去整理
-这次算复习加上整理
-单例模式不再重复，细节可以在codingInterviewByJava
-以及mutiThread.exercise6中详细回顾
-
-1.pattern0 --->>> 设计原则
-2.pattern1 --->>> 简单工厂模式
