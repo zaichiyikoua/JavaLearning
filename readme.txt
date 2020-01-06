@@ -13,3 +13,5 @@ mutiThreadFramework --->>> java.util.concurrent包中的常用API和框架
 mutiThreadInterview --->>> 多线程经典面试题部分
 
 highPerformanceMySQL --->>> 高性能Mysql学习笔记
+
+designPattern --->>> 设计模式整理笔记
