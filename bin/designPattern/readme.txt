@@ -6,8 +6,13 @@
 以及mutiThread.exercise6中详细回顾
 
 1.pattern0 --->>> 设计原则
+
+##创建型
 2.pattern1 --->>> 简单工厂模式
 3.pattern2 --->>> 工厂模式
 4.pattern3 --->>> 抽象工厂模式
 5.Pattern4 --->>> 建造者模式
 6.pattern5 --->>> 原型模式
+
+##结构型
+7.pattern6 --->>> 适配器模式
