@@ -1,4 +1,4 @@
-package highPerformanceMySQL.chapterTwo;
+package highPerformanceMySQL.chapter2;
 
 /*
 *	MySQL性能优化   学习笔记1
