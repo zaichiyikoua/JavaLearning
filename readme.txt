@@ -4,7 +4,7 @@ algorithm --->>> 经典算法部分
 
 codingInterviewByJava --->>> 剑指offer的部分算法题部分
 
-leetcode --->>> leetcode算法刷题部分
+leetCode --->>> leetCode算法刷题部分
 
 javaBasicExercises --->>> 牛客网JavaSE专项练习题部分
 
