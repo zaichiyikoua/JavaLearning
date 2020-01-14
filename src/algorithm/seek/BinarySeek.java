@@ -16,9 +16,9 @@ public class BinarySeek {
         while (head <= tail) {
             mid = (head + tail) / 2;
             // 和中间值比较，然后缩短区间的范围
-            if (keyValue < mid) {
+            if (keyValue < arr[mid]) {
                 tail = mid - 1;
-            } else if (keyValue > mid) {
+            } else if (keyValue > arr[mid]) {
                 head = mid + 1;
             } else {
                 // 如果相等了，那就表明是要查找的值
