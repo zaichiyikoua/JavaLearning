@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.sort;
 
 /*
 *	快排 java实现

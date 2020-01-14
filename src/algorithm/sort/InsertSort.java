@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.sort;
 
 /*
 *	简单插排 java实现

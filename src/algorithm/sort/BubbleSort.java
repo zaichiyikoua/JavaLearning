@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.sort;
 
 /*
 *	冒泡排序 java实现

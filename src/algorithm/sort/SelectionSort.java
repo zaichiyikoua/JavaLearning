@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.sort;
 
 /*
 *	简单选择排序 java实现

@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.sort;
 
 /*
 *	希尔排序 java实现
