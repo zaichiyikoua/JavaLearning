@@ -3,9 +3,9 @@ package codingInterviewByJava.publicClass;
 //剑指offer公用类
 //二叉树链表节点类
 public class TreeNode {
-    int value;
-    TreeNode left;
-    TreeNode right;
+    public int value;
+    public TreeNode left;
+    public TreeNode right;
 
     public int getValue() {
         return value;

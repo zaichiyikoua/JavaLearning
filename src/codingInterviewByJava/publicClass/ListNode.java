@@ -3,8 +3,8 @@ package codingInterviewByJava.publicClass;
 //剑指offer公用类
 //单链表节点类
 public class ListNode {
-    int value;
-    ListNode next;
+    public int value;
+    public ListNode next;
 
     public int getValue() {
         return value;
