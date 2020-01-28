@@ -6,5 +6,6 @@
 #### exercise1 --->>> Semaphore和Exchanger的使用
 #### exercise2 --->>> 并发容器
 #### exercise3 --->>> executor和ThreadPoolExecutor的使用
+#### exercise4 --->>> countDownLatch和cyclicBarrier的使用
 
 也是一些练习
