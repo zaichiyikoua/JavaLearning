@@ -8,6 +8,8 @@
 
 ### javaBasicExercises --->>> 牛客网JavaSE专项练习题部分
 
+### javaContest --->>> 牛客网各大公司校招社招真题
+
 ### mutiThread --->>> Java并发练习部分
 
 ### mutiThreadFramework --->>> java.util.concurrent包中的常用API和框架
