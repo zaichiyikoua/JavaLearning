@@ -19,3 +19,5 @@
 ### highPerformanceMySQL --->>> 高性能Mysql学习笔记
 
 ### designPattern --->>> 设计模式整理笔记
+
+### linuxBasis --->>> linux基础整理笔记
