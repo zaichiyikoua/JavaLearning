@@ -20,6 +20,8 @@
 
 ### designPattern --->>> 设计模式整理笔记
 
+### javaNewFeatures --->>> java8/9/11新特性学习和使用练习笔记
+
 ### linuxBasis --->>> linux基础整理笔记
 
 ### interview --->>> 高频面试题记录和复习
