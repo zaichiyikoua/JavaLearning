@@ -2,6 +2,8 @@ package javaNewFeatures.java8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 import java.util.stream.Stream;
 
@@ -75,5 +77,36 @@ public class StreamLearning {
         // 生成
         // 会一直生成随机数
         Stream.generate(() -> new Random().nextInt(10)).limit(10).forEach(System.out::println);
+    }
+
+    /**
+     * 中间操作不会执行任何操作，只有终止操作的时候，会一次性执行所有的操作，这被称为“延迟加载”或“惰性求值”
+     */
+    /*
+     * 筛选与切片
+     * filter---接受lambda，从流种排除某些元素
+     * limit---截断流，使元素不超过指定数量
+     * skip(n)---跳过元素，返回一个扔掉了前n个元素的流。如果流中元素不超过n，则返回一个空流。
+     * distinct---筛选，通过流所生成元素的hashcode()和equals()去除重复元素
+     */
+    List<Employee> list = Arrays.asList(new Employee(100, "张三", 18, 1000), new Employee(101, "李四", 19, 1001),
+        new Employee(102, "王二", 20, 1002), new Employee(103, "麻子", 21, 1003));
+
+    // 内部迭代：迭代操作由StreamAPI自动完成
+    public void StreamTest2() {
+        // 拿到流，过滤年龄小于15的
+        list.stream().filter((emp) -> emp.getAge() > 15).forEach(System.out::println);;
+        list.stream().limit(100).forEach(System.out::println);
+        list.stream().skip(3).forEach(System.out::println);
+        list.stream().distinct().forEach(System.out::println);
+
+    }
+
+    // 外部迭代：就是最开始学集合的时候见过的iterator
+    public void testIterator() {
+        Iterator<Employee> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 }
