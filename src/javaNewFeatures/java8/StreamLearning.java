@@ -124,4 +124,21 @@ public class StreamLearning {
         list.stream().map((emp) -> emp.getName()).forEach(System.out::println);
         System.out.println("************************************");
     }
+
+    /*
+     * 排序
+     * sorted()---自然排序
+     * sorred(Comparator comp)---定制排序
+     */
+    public void StreamTest4() {
+        list.stream().sorted().forEach(System.out::println);
+        list.stream().sorted((emp1, emp2) -> {
+            if (emp1.getAge().equals(emp2.getAge())) {
+                // 年龄相同，按照姓名排序
+                return emp1.getName().compareTo(emp2.getName());
+            } else {
+                return emp1.getAge().compareTo(emp2.getAge());
+            }
+        }).forEach(System.out::println);
+    }
 }
