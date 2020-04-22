@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Stream;
 
 import javaNewFeatures.java8.practice.Employee;
 
 /**
- * java8新特性学习
+ * java8新特性Stream学习
  * 
  * @author zaichiyikoua
  * 
@@ -140,5 +141,40 @@ public class StreamLearning {
                 return emp1.getAge().compareTo(emp2.getAge());
             }
         }).forEach(System.out::println);
+    }
+
+    /*
+     * 终止操作：会从流的流水线生成结果，其结果可以是任何不是流的值，例如：List，Integer甚至是void
+     */
+    /*
+     * 查找与匹配
+     * allMatch---检查是否匹配全部元素
+     * anyMatch---检查是否至少匹配一个元素(至少有一个元素满足条件)
+     * noneMatch---检查是否没有匹配任何元素
+     * findFirst---返回第一个元素
+     * findAny---返回当前流中的任意值
+     * count---返回流中元素的数量
+     * max---返回流中最大的元素
+     * min---返沪流中最小的元素
+     */
+    @SuppressWarnings("unused")
+    public void StreamTest5() {
+        // 可以清楚的看到各个查找与匹配的返回结果
+        boolean allMatch = list.stream().allMatch((emp) -> emp.getAge() > 18);
+        boolean anyMatch = list.stream().anyMatch((emp) -> emp.getAge() > 18);
+        boolean noneMatch = list.stream().noneMatch((emp) -> emp.getAge() > 18);
+
+        // 这个Optional是一个容器类 java8中尽可能的去避免空指针异常
+        // 如果返回的值一旦有可能为空，就会封装进op中
+        // 比如说findFirst，有可能就没有第一个元素
+        Optional<Employee> findFirst = list.stream().findFirst();
+        Employee employee = findFirst.get();
+        // 比如说过滤出年龄小于18的，然后随便返回一个
+        Optional<Employee> findAny = list.stream().filter((emp) -> emp.getAge() < 18).findAny();
+        Employee employee2 = findAny.get();
+
+        long count = list.stream().count();
+        // comparator这是一个接口，要自己写基于怎样规则得到的最大值，同理min也是一样
+        // list.stream().max(comparator);
     }
 }
