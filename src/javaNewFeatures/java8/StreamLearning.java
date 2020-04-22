@@ -109,4 +109,19 @@ public class StreamLearning {
             System.out.println(iterator.next());
         }
     }
+
+    /*
+     * 映射
+     * map---接受lambda参数，将元素转换成其他形式或提取信息。
+     * 接受一个函数作为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素
+     * faltMap---接受一个函数作为参数，将流中的每个值都替换成另一个流，然后把所有的流连接成一个流
+     */
+    public void StreamTest3() {
+        List<String> list2 = Arrays.asList("aa", "bb", "cc", "dd");
+        // 将list中的每个元素都应用，转成大写
+        list2.stream().map((str) -> str.toUpperCase()).forEach(System.out::println);
+        // 实际工作例子：比如说提取员工的名字
+        list.stream().map((emp) -> emp.getName()).forEach(System.out::println);
+        System.out.println("************************************");
+    }
 }
