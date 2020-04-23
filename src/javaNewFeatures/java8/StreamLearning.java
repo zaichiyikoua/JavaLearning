@@ -2,10 +2,16 @@ package javaNewFeatures.java8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Random;
+import java.util.Set;
+import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import javaNewFeatures.java8.practice.Employee;
@@ -176,5 +182,53 @@ public class StreamLearning {
         long count = list.stream().count();
         // comparator这是一个接口，要自己写基于怎样规则得到的最大值，同理min也是一样
         // list.stream().max(comparator);
+    }
+
+    /*
+     * 规约  这个很重要，map和reduce的连接通常被称为map-reduce模式，配合使用
+     * reduce---将流中元素反复结合起来 ，得到一个值
+     */
+    @SuppressWarnings("unused")
+    public void StreamTest6() {
+        List<Integer> asList = Arrays.asList(1, 2, 3, 4, 5, 6);
+        // 比如说计算总和 第一个参数identity起始值 第二个参数accumulator计算
+        Integer reduce = asList.stream().reduce(0, (x, y) -> x + y);
+        System.out.println(reduce);
+        System.out.println("****************");
+
+        // 计算工资总和 先拿到所有的工资，然后计算总和
+        Optional<Integer> reduce2 = list.stream().map((emp) -> emp.getSalary()).reduce(Integer::sum);
+        Integer integer = reduce2.get();
+    }
+
+    /*
+     * 收集
+     * collect---将流转换成其他形式，接受一个collector接口的实现，用于给Stream中元素做汇总的方法
+     */
+    @SuppressWarnings("unused")
+    public void StreamTest7() {
+        // collector接口，java为我们提供了一个方便的工具类Collectors
+        // 比如收集emp的名字到一个集合中
+        // 到list中
+        List<String> collect = list.stream().map(Employee::getName).collect(Collectors.toList());
+        // 到set中
+        Set<String> collect2 = list.stream().map(Employee::getName).collect(Collectors.toSet());
+        // 到特殊的指定集合中
+        HashSet<String> collect3 = list.stream().map(Employee::getName).collect(Collectors.toCollection(HashSet::new));
+        System.out.println("*****************************");
+        // 收集得到总数
+        Long countLong = list.stream().collect(Collectors.counting());
+        // 得到平均值
+        Double aveDouble = list.stream().collect(Collectors.averagingInt(Employee::getSalary));
+        // 得到总和
+        Integer sumInteger = list.stream().collect(Collectors.summingInt(Employee::getSalary));
+        System.out.println("*****************************");
+        // 分组返回的是一个map
+        Map<Integer, List<Employee>> groupMap = list.stream().collect(Collectors.groupingBy(Employee::getAge));
+        // 多级分组 比如先按照年龄，再按照其他
+        Map<Integer, Map<Integer, List<Employee>>> groupMap2 =
+            list.stream().collect(Collectors.groupingBy(Employee::getAge, Collectors.groupingBy(Employee::getSalary)));
+        // 连接字符
+        String joinString = list.stream().map(Employee::getName).collect(Collectors.joining(","));
     }
 }
